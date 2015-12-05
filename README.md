@@ -2,6 +2,7 @@
 Just to test some hashing algorithms
 
 With Discrete Cosine Transform : 
+<pre>
 Candidate File:	./candidates/apn-1.jpg
 No Match.
 Candidate File:	./candidates/apn-2.jpg
@@ -14,3 +15,4 @@ Candidate File:	./candidates/noise60.jpg
 Similar to:	./assets/CCF21102015_0002-9.png(92%)
 Candidate File:	./candidates/reversed.jpg
 No Match.
+</pre>
