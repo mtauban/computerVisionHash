@@ -1,0 +1,22 @@
+%Read an image
+IMG=imread('./assets/CCF21102015_0001-1.png') ;
+% Arbitrary size for the image processing
+AR_SIZE=512 ; 
+IMG=imresize(IMG,[AR_SIZE AR_SIZE]) ; 
+
+% We take a black and white version of the image
+processedbwimg=im2bw(IMG,0.7) ;
+
+I = (processedbwimg);
+% This should be comprised between -1 and 1
+J = dct2(I)/AR_SIZE;
+
+% Take just the uppercorner 
+AR_HASHSIZE=8;
+uc=J(1:AR_HASHSIZE,1:AR_HASHSIZE) ; 
+ucc=uc ; 
+ucc(uc>0)=1 ;
+ucc(uc<0)=0 ; 
+
+imshow(ucc) ; 
+uint64
